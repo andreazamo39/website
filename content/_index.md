@@ -42,4 +42,9 @@ sections:
       title: Hi, I'm Max!
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
+  - block: markdown
+    content:
+      title: ""
+      text: '{{< city >}}'
+
 ---
