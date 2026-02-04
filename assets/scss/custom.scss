@@ -70,13 +70,33 @@ body {
 
 /* ====== PROFILE OVER BANNER ====== */
 
-/* Contenitore del profilo (foto + nome) */
-.portrait,
-.author-card,
-.profile {
+
+/* Colonna sinistra (foto + nome + social) */
+.col-12.col-lg-4,
+.col-lg-4 {
   position: relative;
-  margin-top: -120px;   /* sovrappone al banner */
-  z-index: 10;
+  margin-top: -140px;   /* sovrapposizione banner */
+  z-index: 20;
+}
+
+/* Foto profilo rotonda con bordo */
+.avatar,
+.avatar-circle,
+.portrait img {
+  border-radius: 50%;
+  border: 6px solid #ffffff;
+  background-color: #ffffff;
+}
+
+/* Titoli sotto la foto */
+.portrait-title h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.portrait-title h3 {
+  font-size: 1rem;
+  color: #666;
 }
 
 /* Foto profilo: resta rotonda */
