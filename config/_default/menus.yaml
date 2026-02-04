@@ -5,14 +5,24 @@
 
 main:
   - name: About
-    url: '#about'
+    url: /
     weight: 10
   - name: Publications
-    url: '#publications'
+    url: /publications/
     weight: 20
   - name: Working Papers
-    url: '#workingpapers'
+    url: /working-papers/
     weight: 30
+  - name: Teaching
+    url: /teaching/
+    weight: 40
+  - name: CV
+    url: /cv/
+    weight: 50
+  - name: Contact
+    url: /contact/
+    weight: 60
+
 
 
 # Link to a PDF of your resume/CV from the menu.
