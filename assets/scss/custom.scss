@@ -67,3 +67,43 @@ body {
 
 
 
+
+/* ====== PROFILE OVER BANNER ====== */
+
+/* Contenitore del profilo (foto + nome) */
+.portrait,
+.author-card,
+.profile {
+  position: relative;
+  margin-top: -120px;   /* sovrappone al banner */
+  z-index: 10;
+}
+
+/* Foto profilo: resta rotonda */
+.avatar,
+.avatar-circle,
+.portrait img {
+  border-radius: 50%;
+  border: 6px solid #ffffff;  /* bordo bianco come Roberta */
+  background-color: #fff;
+}
+
+/* Spazio tra foto e testo */
+.portrait-title {
+  margin-top: 1rem;
+}
+
+/* Nome */
+.portrait-title h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* Ruolo / università */
+.portrait-title h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666;
+}
+
+
