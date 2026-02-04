@@ -251,8 +251,3 @@ h3 {
 .hs-cv      { left: 15%;  top: 45%; width: 15%; height: 21%; }
 .hs-contact { left: 74%; top: 45%; width: 15%; height: 21%; }
 
-/* DEBUG: mostra sempre i confini delle aree (poi lo togliamo) */
-.hotspot {
-  outline: 2px dashed rgba(255, 0, 0, 0.55);
-  background: rgba(255, 0, 0, 0.08);
-}
