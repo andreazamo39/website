@@ -1,0 +1,42 @@
+/* ====== STYLE "Andrea" (prima versione) ====== */
+
+/* Navbar red */
+.navbar,
+.navbar.navbar-light,
+.navbar.navbar-expand-lg {
+  background-color: #8b0000 !important;
+}
+
+/* Testo navbar White */
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar a {
+  color: #ffffff !important;
+}
+
+.navbar .nav-link:hover,
+.navbar a:hover {
+  opacity: 0.85;
+}
+
+/* Link nel contenuto red */
+a {
+  color: #b30000;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: #7a0000;
+}
+
+/* Titoli più "strong" */
+h1, h2, h3 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Text more readable */
+body {
+  line-height: 1.65;
+}
