@@ -75,7 +75,7 @@ body {
 .col-12.col-lg-4,
 .col-lg-4 {
   position: relative;
-  margin-top: -140px;   /* sovrapposizione banner */
+  margin-top: -180px;   /* sovrapposizione banner */
   z-index: 20;
 }
 
@@ -127,3 +127,17 @@ body {
 }
 
 
+/* ====== MENU SOPRA IL BANNER ====== */
+
+/* Navbar sempre sopra */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Spazio per evitare che il contenuto salga sotto la navbar */
+body {
+  padding-top: 70px;
+}
