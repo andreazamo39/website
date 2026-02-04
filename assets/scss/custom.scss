@@ -26,6 +26,14 @@ a {
   text-underline-offset: 2px;
 }
 
+/* ====== JUSTIFY ABOUT TEXT ====== */
+
+/* Testo descrizione principale */
+.article-style p {
+  text-align: justify;
+}
+
+
 a:hover {
   color: #7a0000;
 }
