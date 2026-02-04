@@ -141,3 +141,36 @@ body {
 body {
   padding-top: 70px;
 }
+
+/* ====== TYPOGRAPHY REFINEMENT ====== */
+
+/* Testo generale un po' più piccolo */
+body {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Testo dei paragrafi */
+p {
+  font-size: 0.95rem;
+}
+
+/* Titoli principali leggermente ridotti */
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+/* ====== EMPHASIZE ROLE ====== */
+
+/* Ruolo sotto il nome (Assistant Professor) */
+.portrait-title h3 {
+  font-weight: 700;
+}
