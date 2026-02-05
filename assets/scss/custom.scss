@@ -267,6 +267,22 @@ body {
   scroll-padding-top: 90px; /* utile anche per gli anchor link */
 }
 
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10001 !important; /* più alto del banner */
+}
+
+/* Spazio per la navbar fixed */
+body {
+  padding-top: 70px;
+  scroll-padding-top: 90px;
+}
+
+
+
 /* ===== Fix: navbar sopra al banner nelle pagine interne ===== */
 
 /* Altezza navbar (se cambia, cambia qui) */
@@ -283,6 +299,11 @@ body {
   z-index: 10001 !important;
 }
 
+/* Spazio sopra a TUTTE le pagine (home + interne) */
+body {
+  padding-top: var(--nav-h);
+}
+
 /* Spazio extra sopra al banner delle pagine interne (page header) */
 .page-header,
 .article-header,
@@ -294,54 +315,5 @@ body {
 .hero,
 header.page-header {
   padding-top: var(--nav-h) !important;
-}
-
-
-/* =========================
-   NAVBAR sopra + BANNER sotto (HOME + pagine interne)
-   ========================= */
-
-:root{
-  --nav-h: 70px;      /* altezza navbar */
-  --banner-h: 320px;  /* altezza banner */
-}
-
-/* 1) Navbar sempre sopra */
-#navbar-main,
-header .navbar,
-.navbar {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0;
-  width: 100%;
-  z-index: 10050 !important;
-}
-
-/* 2) Banner sotto la navbar (non “spinge” la navbar giù) */
-body::before {
-  content: "";
-  position: fixed; /* banner “attaccato” in alto */
-  top: var(--nav-h);
-  left: 0;
-  width: 100%;
-  height: var(--banner-h);
-  background-image: url("/uploads/Immagine_Bocconi.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* 3) Spazio: navbar + banner */
-body {
-  padding-top: calc(var(--nav-h) + var(--banner-h)) !important;
-  position: relative;
-}
-
-/* 4) Il contenuto sta sopra al banner */
-main, .page-body, .page-wrapper, .universal-wrapper {
-  position: relative;
-  z-index: 1;
 }
 
