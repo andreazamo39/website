@@ -121,3 +121,5 @@ security:
 custom_css:
   - "css/fix-navbar.css"
 
+custom_js:
+  - "js/fix-navbar.js"
