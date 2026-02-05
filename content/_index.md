@@ -44,7 +44,15 @@ sections:
       username: admin
   - block: markdown
     content:
+      title: "Explore my Interactive City"
+      text: |
+        Click on the buildings to navigate through publications, teaching, and contact information.
+
+  - block: markdown
+    content:
       title: ""
-      text: '{{< city >}}'
+      text: |
+        {{< city >}}
+
 
 ---
