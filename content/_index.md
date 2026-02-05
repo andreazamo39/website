@@ -52,7 +52,8 @@ sections:
     content:
       title: ""
       text: |
-        {{< city >}}
-
+        <div style="text-align:center;">
+          Click on the buildings to navigate through publications, teaching, and contact information.
+        </div>
 
 ---
