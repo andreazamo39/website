@@ -1,17 +1,39 @@
-/* FORZA IL MENU SOPRA IL BANNER IN TUTTE LE PAGINE */
+/* FORZA IL MENU SOPRA IL BANNER IN TUTTE LE PAGINE (regole mirate al tema) */
 
-header,
-.navbar,
-.site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: #8b0000;
+/* selector principale usato dal tuo tema (page-header) */
+.page-header,
+.page-header.header--fixed,
+.page-header.header--pinned {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 9999 !important;
+  background-color: #8b0000 !important; /* puoi cambiare il colore se vuoi */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18) !important;
 }
 
-/* spazio sotto il menu per non coprire il contenuto */
+/* in alcuni breakpoint il tema usa .site-header o .site-nav — li copriamo pure */
+.site-header,
+.navbar,
+.site-nav {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 9999 !important;
+  background-color: #8b0000 !important;
+}
+
+/* spazio sotto la navbar per non nascondere il contenuto:
+   aumenta o diminuisci 70px a seconda dell'altezza reale della barra */
 body {
-  padding-top: 70px;
+  padding-top: 70px !important;
+}
+
+/* assicurati che l'hero/banner non aggiunga margin-top che spingi la navbar giù */
+.page-header + .page-body,
+.hero,
+.site-banner {
+  margin-top: 0 !important;
 }
