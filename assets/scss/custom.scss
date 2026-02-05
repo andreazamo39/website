@@ -275,4 +275,23 @@ h3 {
   z-index: 1;
 }
 
+/* 1) Navbar sempre sopra (sticky) */
+header .navbar {
+  position: sticky !important;
+  top: 0;
+  z-index: 10000 !important;
+}
+
+/* 2) Assicura che banner/hero stiano sotto */
+.hero,
+.page-header,
+.article-header {
+  position: relative;
+  z-index: 1;
+}
+
+/* 3) Evita che il contenuto finisca "sotto" la navbar */
+body {
+  scroll-padding-top: 90px; /* utile anche per gli anchor link */
+}
 
