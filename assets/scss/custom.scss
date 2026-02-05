@@ -251,3 +251,15 @@ h3 {
 .hs-cv      { left: 15%;  top: 45%; width: 15%; height: 21%; }
 .hs-contact { left: 74%; top: 45%; width: 15%; height: 21%; }
 
+/* Center city section subtitle text */
+.section-markdown p {
+  text-align: center;
+}
+
+
+/* Reduce space before the city map */
+.city-wrap {
+  margin-top: -2rem;
+}
+
+
