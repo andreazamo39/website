@@ -62,19 +62,16 @@ body {
   padding-top: 70px;          /* spazio per navbar fixed */
 }
 
+/* Banner image (solo in cima, non segue lo scroll) */
 body::before {
   content: "";
-  position: fixed;            /* resta in alto come vero banner */
-  top: 0;
-  left: 0;
+  display: block;
   width: 100%;
   height: 320px;
   background-image: url("/uploads/Immagine_Bocconi.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 0;                 /* banner dietro */
-  pointer-events: none;       /* non “copre” click/menu */
 }
 
 
@@ -136,21 +133,6 @@ body::before {
   color: #666;
 }
 
-
-/* ====== MENU SOPRA IL BANNER ====== */
-
-/* Navbar sempre sopra */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-/* Spazio per evitare che il contenuto salga sotto la navbar */
-body {
-  padding-top: 70px;
-}
 
 /* ====== TYPOGRAPHY REFINEMENT ====== */
 
@@ -291,4 +273,10 @@ body {
   left: 0;
   width: 100%;
   z-index: 10001 !important; /* più alto del banner */
+}
+
+/* Spazio per la navbar fixed */
+body {
+  padding-top: 70px;
+  scroll-padding-top: 90px;
 }
