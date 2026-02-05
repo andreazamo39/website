@@ -49,4 +49,12 @@ body {
   padding-top: 80px !important;
 }
 
-/* Se vuoi che la barra sia semitrasparente rimuovi il colore sopra o cambia rgba */
+body { padding-top: 110px !important; }
+:root { scroll-padding-top: 110px; }
+h1, h2, h3 { scroll-margin-top: 110px; }
+
+
+
+
+
+
