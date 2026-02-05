@@ -43,17 +43,20 @@ sections:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
   - block: markdown
+    id: city-intro
     content:
       title: "Explore my Interactive City"
-      text: |
-        Click on the buildings to navigate through publications, teaching, and contact information.
-
-  - block: markdown
-    content:
-      title: ""
       text: |
         <div style="text-align:center;">
           Click on the buildings to navigate through publications, teaching, and contact information.
         </div>
+
+  - block: markdown
+    id: city-map
+    content:
+      title: ""
+      text: |
+        {{< city >}}
+
 
 ---
