@@ -311,5 +311,10 @@ body {
   padding-top: var(--nav-h) !important;
 }
 
+/* Alcuni layout mettono il banner in .hero o header.page-header */
+.hero,
+header.page-header {
+  padding-top: var(--nav-h) !important;
+}
 
 
