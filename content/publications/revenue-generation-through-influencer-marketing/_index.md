@@ -31,3 +31,31 @@ Direct-to-consumer firms increasingly believe that influencer marketing is an ef
 - Best Student Paper Award (WISE Conference 2022)  
 - Featured in Harvard Business Review, Harvard Business Manager, MIT Sloan Management Review, Italia Oggi
 
+
+
+
+<!-- Fix navbar only for this publication page -->
+<script>
+(function () {
+  function applyFix() {
+    const el = document.querySelector('.page-header.header--fixed');
+    if (!el) return;
+
+    el.style.setProperty('position', 'fixed', 'important');
+    el.style.setProperty('top', '0', 'important');
+    el.style.setProperty('left', '0', 'important');
+    el.style.setProperty('width', '100%', 'important');
+    el.style.setProperty('z-index', '99999', 'important');
+    el.style.setProperty('transform', 'none', 'important');
+  }
+
+  applyFix();
+  window.addEventListener('load', applyFix);
+
+  try {
+    const mo = new MutationObserver(() => applyFix());
+    mo.observe(document.body, { childList: true, subtree: true, attributes: true });
+  } catch(e){}
+})();
+</script>
+<!-- End fix navbar -->
