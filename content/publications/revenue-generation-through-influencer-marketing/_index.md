@@ -6,15 +6,20 @@ authors:
   - Andreas Bayerl
   - Jacob Goldenberg
   - Andreas Lanz
+
 publication: "Journal of Marketing (FT 50)"
-pdf: "https://journals.sagepub.com/doi/10.1177/002224292312174"
-thumbnail: "/uploads/influencer_marketing.jpg"
+publication_short: "Journal of Marketing"
+
+abstract: "Direct-to-consumer firms increasingly believe that influencer marketing is an effective option for seeding. However, the current managerially relevant question for direct-to-consumer firms of whether to target low- or high-followership influencers to generate immediate revenue is still unresolved. In this article, the authors’ goal is to answer this question by considering for the first time the whole influencer-marketing funnel, that is, from followers on user-generated content networks (e.g., on Instagram), to reached followers, to engagement, to actual revenue, while accounting for the cost of paid endorsements. The authors find that low-followership targeting outperforms high-followership targeting by order of magnitude across three performance (return on investment) metrics. A mediation analysis reveals that engagement can explain the negative relationship between the influencer followership levels and return on investment. This is in line with the rationale based on social capital theory that with higher followership levels of an influencer, the engagement between an influencer and their followers decreases. These two findings are derived from secondary sales data of 1,881,533 purchases and results of three full-fledged field studies with hundreds of paid influencer endorsements, establishing the robustness of the findings."
+
+url_pdf: "https://journals.sagepub.com/doi/10.1177/002224292312174"
+
+# (facoltativo) url_code, url_dataset, url_project ecc.
+# url_dataset: ""
+# url_code: ""
+
 draft: false
 ---
-
-## Abstract
-
-Direct-to-consumer firms increasingly believe that influencer marketing is an effective option for seeding. However, the current managerially relevant question for direct-to-consumer firms of whether to target low- or high-followership influencers to generate immediate revenue is still unresolved. In this article, the authors’ goal is to answer this question by considering for the first time the whole influencer-marketing funnel, that is, from followers on user-generated content networks (e.g., on Instagram), to reached followers, to engagement, to actual revenue, while accounting for the cost of paid endorsements. The authors find that low-followership targeting outperforms high-followership targeting by order of magnitude across three performance (return on investment) metrics. A mediation analysis reveals that engagement can explain the negative relationship between the influencer followership levels and return on investment. This is in line with the rationale based on social capital theory that with higher followership levels of an influencer, the engagement between an influencer and their followers decreases. These two findings are derived from secondary sales data of 1,881,533 purchases and results of three full-fledged field studies with hundreds of paid influencer endorsements, establishing the robustness of the findings.
 
 ## Awards & Press
 - 2025 Don Lehmann Award  
