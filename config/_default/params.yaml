@@ -117,4 +117,7 @@ security:
   allow_frame: true
 
 
-custom_css = ["css/fix-navbar.css"]
+
+custom_css:
+  - "css/fix-navbar.css"
+
