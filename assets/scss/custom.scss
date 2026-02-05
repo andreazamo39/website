@@ -280,3 +280,36 @@ body {
   padding-top: 70px;
   scroll-padding-top: 90px;
 }
+
+
+
+/* ===== Fix: navbar sopra al banner nelle pagine interne ===== */
+
+/* Altezza navbar (se cambia, cambia qui) */
+:root {
+  --nav-h: 70px;
+}
+
+/* Navbar fixed */
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10001 !important;
+}
+
+/* Spazio sopra a TUTTE le pagine (home + interne) */
+body {
+  padding-top: var(--nav-h);
+}
+
+/* Spazio extra sopra al banner delle pagine interne (page header) */
+.page-header,
+.article-header,
+.universal-wrapper > .page-header {
+  padding-top: var(--nav-h) !important;
+}
+
+
+
