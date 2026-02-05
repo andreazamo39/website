@@ -5,7 +5,7 @@
     const el = document.querySelector('.page-header.header--fixed');
     if (!el) return false;
 
-    // rimuovi classi headroom che spostano/nascondono la barra
+    // rimuovi classi headroom
     ['headroom','headroom--pinned','headroom--top','headroom--bottom','headroom--not-bottom','headroom--not-top'].forEach(c => {
       if (el.classList.contains(c)) el.classList.remove(c);
     });
@@ -39,6 +39,7 @@
     const mo = new MutationObserver(() => applyFix());
     mo.observe(document.body, { childList: true, subtree: true, attributes: true });
   } catch (e) {
-    // se il browser o ambiente non consente observer, non blocchiamo
+    // se l'ambiente non consente observer, non blocchiamo
   }
 })();
+
