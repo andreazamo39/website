@@ -57,23 +57,25 @@ body {
 }
 
 /* Banner image */
+body {
+  position: relative;         /* crea contesto */
+  padding-top: 70px;          /* spazio per navbar fixed */
+}
+
 body::before {
   content: "";
-  display: block;
+  position: fixed;            /* resta in alto come vero banner */
+  top: 0;
+  left: 0;
   width: 100%;
   height: 320px;
   background-image: url("/uploads/Immagine_Bocconi.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 0;                 /* banner dietro */
+  pointer-events: none;       /* non “copre” click/menu */
 }
-
-/* Space between banner and content */
-body {
-  padding-top: 0;
-}
-
-
 
 
 /* ====== PROFILE OVER BANNER ====== */
@@ -263,24 +265,12 @@ h3 {
 }
 
 
-/* Navbar always above  */
-.navbar, .navbar-container {
-  position: relative;
-  z-index: 9999 !important;
-}
-
 /* Every banner must stay down */
 .page-header, .article-header, .hero, header {
   position: relative;
   z-index: 1;
 }
 
-/* 1) Navbar sempre sopra (sticky) */
-header .navbar {
-  position: sticky !important;
-  top: 0;
-  z-index: 10000 !important;
-}
 
 /* 2) Assicura che banner/hero stiano sotto */
 .hero,
@@ -295,3 +285,10 @@ body {
   scroll-padding-top: 90px; /* utile anche per gli anchor link */
 }
 
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10001 !important; /* più alto del banner */
+}
