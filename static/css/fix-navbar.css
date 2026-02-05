@@ -72,3 +72,34 @@ body[data-wc-page-id*="revenue-generation-through-influencer-marketing"] {
 
 
 
+/* Publications list refinements */
+
+/* 1) Nasconde la label "Abstract" nella lista publications */
+.pub-list-item .article-style > p:first-child strong {
+  display: none !important;
+}
+
+/* 2) Aggiunge "..." alla fine dell'estratto (preview) */
+.pub-list-item .article-style > p {
+  position: relative;
+}
+.pub-list-item .article-style > p::after {
+  content: " ..." !important;
+}
+
+/* 3) Nasconde "Last updated on ..." nella lista */
+.pub-list-item .stream-meta .article-metadata,
+.pub-list-item .stream-meta .stream-meta {
+  /* non sempre esiste uguale in tutti i temi, ma proviamo a colpire il blocco giusto */
+}
+.pub-list-item .stream-meta time,
+.pub-list-item .stream-meta .article-date,
+.pub-list-item .stream-meta .meta-date,
+.pub-list-item .stream-meta .lastmod,
+.pub-list-item .stream-meta .updated,
+.pub-list-item .stream-meta .article-date,
+.pub-list-item .stream-meta .date {
+  display: none !important;
+}
+
+
