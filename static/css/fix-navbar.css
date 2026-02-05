@@ -1,0 +1,17 @@
+/* FORZA IL MENU SOPRA IL BANNER IN TUTTE LE PAGINE */
+
+header,
+.navbar,
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #8b0000;
+}
+
+/* spazio sotto il menu per non coprire il contenuto */
+body {
+  padding-top: 70px;
+}
