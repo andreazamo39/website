@@ -263,3 +263,16 @@ h3 {
 }
 
 
+/* Navbar always above  */
+.navbar, .navbar-container {
+  position: relative;
+  z-index: 9999 !important;
+}
+
+/* Every banner must stay down */
+.page-header, .article-header, .hero, header {
+  position: relative;
+  z-index: 1;
+}
+
+
