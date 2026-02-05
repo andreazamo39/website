@@ -50,13 +50,15 @@ sections:
         <div style="text-align:center;">
           Click on the buildings to navigate through publications, teaching, and contact information.
         </div>
-
+  
   - block: markdown
     id: city-map
     content:
       title: ""
       text: |
         {{< city >}}
+
+
 
 
 ---
