@@ -6,10 +6,6 @@ authors:
   - Shunyuan Zhang
   - Xitong Li
 
-lastmod: 2023-11-16
-tags:
-  - Current Manuscripts
-
 image:
   filename: featured.jpg
   preview_only: true
