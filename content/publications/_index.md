@@ -36,3 +36,41 @@ This section presents my research publications, linked to their full texts. Addi
 </script>
 <!-- End: fix navbar -->
 
+<!-- Remove "Last updated" in publications list -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // cerca tutti gli elementi di testo che contengono "Last updated"
+  const walker = document.createTreeWalker(document.querySelector('main') || document.body, NodeFilter.SHOW_TEXT, null);
+  const toRemove = [];
+  while (walker.nextNode()) {
+    const txt = walker.currentNode.nodeValue;
+    if (!txt) continue;
+    // cerca frasi tipo: "Last updated on Feb 6, 2026" o "Last updated on Feb 5, 2026"
+    if (txt.match(/Last updated on\s+/i)) {
+      toRemove.push(walker.currentNode);
+    }
+  }
+  // rimuove i nodi di testo che contengono "Last updated"
+  toRemove.forEach(node => {
+    // se il nodo è l'unico figlio di un elemento <p> o <div>, rimuove l'intero elemento
+    const parent = node.parentElement;
+    if (!parent) return;
+    // se il parent ha solo questo testo, rimuovilo completamente
+    if ((parent.childNodes.length === 1 && parent.firstChild === node) || parent.innerText.trim().toLowerCase().startsWith('last updated')) {
+      parent.remove();
+    } else {
+      // altrimenti rimuove solo la porzione "Last updated on ..."
+      parent.innerHTML = parent.innerHTML.replace(/Last updated on\s*[^<]*/i, '');
+      // pulisce eventuali spazi vuoti rimanenti
+      if (parent.innerText.trim() === '') parent.remove();
+    }
+  });
+
+  // Forza la comparsa della riga data + journal (se presente nel markup ma nascosta da CSS)
+  document.querySelectorAll('.pub-info, .article-metadata, .article-meta, .meta, .pub-meta').forEach(el => {
+    el.style.display = 'block';
+    el.style.color = '#666';
+    el.style.fontSize = '0.95rem';
+  });
+});
+</script>
