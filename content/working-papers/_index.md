@@ -25,8 +25,11 @@ tags:
 image:
   filename: featured.jpg
   preview_only: true
-
+  
 draft: false
+
+---
+
 ## Projects in development
 <div id="wp-development"></div>
 
