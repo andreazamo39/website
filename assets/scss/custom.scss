@@ -339,3 +339,11 @@ header.page-header {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+
+
+.stream-item .article-metadata,
+.stream-item .article-metadata * {
+  color: #666;
+  font-size: 0.95rem;
+}
