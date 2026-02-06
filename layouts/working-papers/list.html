@@ -1,25 +1,45 @@
 {{ define "main" }}
 <div class="universal-wrapper">
 
-  {{ with .Title }}<h1 class="mt-0">{{ . }}</h1>{{ end }}
+  {{ with .Title }}<h1 style="margin-top: 60px;">{{ . }}</h1>{{ end }}
   {{ with .Content }}{{ . }}{{ end }}
 
   <style>
     .wp-item{
       display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:24px;
+      align-items:flex-start; /* ALLINEA IN ALTO col titolo */
+      gap:16px;               /* meno spazio tra testo e immagine */
       margin: 28px 0;
     }
-    .wp-text{flex: 1 1 auto; min-width: 0;}
-    .wp-img{flex: 0 0 180px;}
-    .wp-img img{width:100%; height:auto; border-radius:12px; display:block;}
+  
+    .wp-text{
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+  
+    .wp-img{
+      flex: 0 0 120px;        /* IMMAGINE PIÙ PICCOLA */
+      margin-top: 4px;        /* micro-allineamento col titolo */
+    }
+  
+    .wp-img img{
+      width:100%;
+      height:auto;
+      border-radius:12px;
+      display:block;
+    }
+  
     @media (max-width: 900px){
-      .wp-item{flex-direction:column;}
-      .wp-img{flex: 0 0 auto; width: 220px;}
+      .wp-item{
+        flex-direction:column;
+      }
+      .wp-img{
+        width: 160px;
+        margin-top: 12px;
+      }
     }
   </style>
+
 
   <div class="mt-4">
     {{ range .Pages.ByDate.Reverse }}
