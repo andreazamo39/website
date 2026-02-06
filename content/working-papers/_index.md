@@ -1,3 +1,4 @@
+---
 title: "Working Papers"
 type: landing
 sections:
@@ -6,7 +7,13 @@ sections:
       title: "Working Papers"
       text: "Coming soon."
 ---
+This section presents my working papers and ongoing research projects.
 
+## Current Manuscripts
+<div id="wp-current"></div>
+
+## Projects in development
+<div id="wp-development"></div>
 
 
 <!-- Start: fix navbar (inserted manually) -->
