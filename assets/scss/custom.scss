@@ -284,3 +284,38 @@ header.page-header {
   padding-top: var(--nav-h) !important;
 }
 
+
+.pub-abstract {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.pub-meta {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.pub-authors {
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.pub-info {
+  color: #666;
+}
+
+.pub-journal {
+  font-weight: 600;
+  color: #444;
+}
+
+.pub-sep {
+  margin: 0 0.4rem;
+  color: #999;
+}
+
