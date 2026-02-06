@@ -17,6 +17,7 @@ publication_types: ["2"]
 url_pdf: "https://journals.sagepub.com/doi/10.1177/00222429231217471"
 
 image:
+  filename: "featured2.jpg"
   preview_only: true
 
 draft: false
