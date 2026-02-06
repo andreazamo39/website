@@ -1,5 +1,7 @@
 ---
 title: "Revenue Generation Through Influencer Marketing"
+summary: "Direct-to-consumer firms increasingly believe that influencer marketing is an effective option for seeding. However, the current managerially relevant question for direct-to-consumer firms of whether to target low- or high-followership influencers to generate immediate revenue is still unresolved..."
+
 date: 2023-11-16
 authors:
   - Maximilian Beichert
