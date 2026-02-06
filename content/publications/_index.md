@@ -74,3 +74,29 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
+
+
+<!-- Add publication date + journal after authors in publications list -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // trova tutti i blocchi che contengono gli autori
+  const authorBlocks = document.querySelectorAll('.pub-authors, .article-metadata, .stream-item');
+
+  authorBlocks.forEach(block => {
+    // evitiamo duplicazioni
+    if (block.querySelector('.added-pub-info')) return;
+
+    // testo da aggiungere (CAMBIALO QUI SE VUOI)
+    const info = document.createElement('div');
+    info.className = 'added-pub-info';
+    info.innerHTML = '<strong>November 16, 2023 · Journal of Marketing (FT 50)</strong>';
+
+    // stile leggero
+    info.style.marginTop = '0.25rem';
+    info.style.color = '#666';
+
+    // lo inseriamo subito dopo il blocco autori
+    block.appendChild(info);
+  });
+});
+</script>
