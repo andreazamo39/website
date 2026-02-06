@@ -1,0 +1,33 @@
+<div class="pub-list-item">
+  <h3 class="article-title">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </h3>
+
+  {{ if .Params.abstract }}
+    <p class="pub-abstract">
+      {{ .Params.abstract | plainify }}
+    </p>
+  {{ end }}
+
+  <div class="pub-meta">
+    {{ with .Params.authors }}
+      <div class="pub-authors"><strong>{{ . }}</strong></div>
+    {{ end }}
+
+    <div class="pub-info">
+      <span class="pub-date">{{ .Date.Format "January 2, 2006" }}</span>
+      <span class="pub-sep"> · </span>
+      <span class="pub-journal">
+        Published at: {{ .Params.journal }}
+      </span>
+    </div>
+  </div>
+
+  {{ with .Params.links }}
+    {{ range . }}
+      <a class="btn btn-outline-primary btn-sm" href="{{ .url }}" target="_blank">
+        {{ .name }}
+      </a>
+    {{ end }}
+  {{ end }}
+</div>
