@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div class="universal-wrapper">
+  {{ with .Title }}<h1 class="mt-0">{{ . }}</h1>{{ end }}
+  {{ with .Content }}{{ . }}{{ end }}
+
+  <div class="mt-4">
+    {{ range .Pages.ByDate.Reverse }}
+      <div class="mb-4">
+        <!-- titolo NON cliccabile -->
+        <div style="font-size:26px; font-weight:700; text-decoration: underline;">
+          {{ .Title }}
+        </div>
+
+        {{ with .Params.authors }}
+          <div style="opacity:.8; margin-top:6px;">
+            {{ delimit . ", " }}
+          </div>
+        {{ end }}
+
+        <!-- immagine (se esiste featured) -->
+        {{ $img := .Resources.GetMatch "featured*" }}
+        {{ if $img }}
+          <div style="margin-top:10px; max-width:140px;">
+            <img src="{{ $img.RelPermalink }}" style="width:100%; height:auto; border-radius:10px;" />
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
