@@ -130,5 +130,10 @@ publications:
   date_format: January 2, 2006
   show_date: true
   show_date_updated: false
+
+
+
+show_last_updated: false
+
   
 
