@@ -26,6 +26,16 @@ a {
   text-underline-offset: 2px;
 }
 
+
+.pub-list-item p,
+.media-body p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* ====== JUSTIFY ABOUT TEXT ====== */
 
 /* Testo descrizione principale */
