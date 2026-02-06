@@ -123,3 +123,10 @@ custom_css:
 
 custom_js:
   - "js/fix-navbar.js"
+
+
+publications:
+  date_format: January 2, 2006
+  show_date: true
+  show_date_updated: false
+
