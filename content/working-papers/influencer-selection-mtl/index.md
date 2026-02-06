@@ -1,5 +1,6 @@
 ---
 title: "Influencer Selection Using a Multi-Task Learning Model"
+type: blank
 authors:
   - Maximilian Beichert
   - Magie Cheng
