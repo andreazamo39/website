@@ -15,5 +15,6 @@ image:
   preview_only: true
 
 draft: false
----
 show_date_updated: false
+---
+
