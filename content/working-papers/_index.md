@@ -46,28 +46,6 @@ This section presents my working papers and ongoing research projects.
 </script>
 <!-- End: fix navbar -->
 
-<!-- Consolidate publication info: remove duplicates, remove "Last updated" and add single date+journal after authors -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  // 1) remove any text nodes containing "Last updated"
-  (function removeLastUpdated() {
-    const walker = document.createTreeWalker(document.querySelector('main') || document.body, NodeFilter.SHOW_TEXT, null);
-    const toRemove = [];
-    while (walker.nextNode()) {
-      const txt = walker.currentNode.nodeValue;
-      if (!txt) continue;
-      if (txt.match(/Last updated on\s+/i)) toRemove.push(walker.currentNode);
-    }
-    toRemove.forEach(node => {
-      const parent = node.parentElement;
-      if (!parent) return;
-      if ((parent.childNodes.length === 1 && parent.firstChild === node) || parent.innerText.trim().toLowerCase().startsWith('last updated')) {
-        parent.remove();
-      } else {
-        parent.innerHTML = parent.innerHTML.replace(/Last updated on\s*[^<]*/i, '');
-        if (parent.innerText.trim() === '') parent.remove();
-      }
-    });
-  })();
+
 
 
