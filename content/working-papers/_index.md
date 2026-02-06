@@ -7,9 +7,15 @@ sections:
       title: ""
       text: "This section presents my working papers and ongoing research projects."
 
-  - block: collection
+  # --- Heading 1 (forzato) ---
+  - block: markdown
     content:
       title: "Current Manuscripts"
+      text: ""
+
+  - block: collection
+    content:
+      title: ""
       filters:
         folders:
           - working-papers
@@ -19,9 +25,15 @@ sections:
     design:
       view: compact
 
-  - block: collection
+  # --- Heading 2 (forzato) ---
+  - block: markdown
     content:
       title: "Projects in development"
+      text: ""
+
+  - block: collection
+    content:
+      title: ""
       filters:
         folders:
           - working-papers
