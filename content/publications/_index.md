@@ -36,165 +36,102 @@ This section presents my research publications, linked to their full texts. Addi
 </script>
 <!-- End: fix navbar -->
 
-<!-- Consolidate publication info: remove duplicates, remove "Last updated" and add single date+journal after authors -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  // 1) remove any text nodes containing "Last updated"
-  (function removeLastUpdated() {
-    const walker = document.createTreeWalker(document.querySelector('main') || document.body, NodeFilter.SHOW_TEXT, null);
-    const toRemove = [];
-    while (walker.nextNode()) {
-      const txt = walker.currentNode.nodeValue;
-      if (!txt) continue;
-      if (txt.match(/Last updated on\s+/i)) toRemove.push(walker.currentNode);
-    }
-    toRemove.forEach(node => {
-      const parent = node.parentElement;
-      if (!parent) return;
-      if ((parent.childNodes.length === 1 && parent.firstChild === node) || parent.innerText.trim().toLowerCase().startsWith('last updated')) {
-        parent.remove();
-      } else {
-        parent.innerHTML = parent.innerHTML.replace(/Last updated on\s*[^<]*/i, '');
-        if (parent.innerText.trim() === '') parent.remove();
-      }
-    });
-  })();
-
-  // 2) For each publication item, extract any existing date+journal text (first occurrence),
-  //    remove duplicates and then insert a single, styled line after the authors.
-  document.querySelectorAll('.stream-item, .media.stream-item').forEach(item => {
-    // remove any previously added helper node
-    const prev = item.querySelector('.added-pub-info');
-    if (prev) prev.remove();
-
-    // try to find an element inside this item that contains a date (e.g. "November 16, 2023")
-    let foundText = null;
-    const possibleEls = item.querySelectorAll('p, div, span');
-    const dateRegex = /\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s*\d{4}\b/;
-    possibleEls.forEach(el => {
-      if (foundText) return;
-      const t = el.innerText || '';
-      const m = t.match(dateRegex);
-      if (m) {
-        // capture whole text of this element (trim)
-        foundText = t.trim();
-      }
-    });
-
-    // if nothing found, skip (we don't create wrong info)
-    if (!foundText) return;
-
-    // Remove any existing elements that exactly contain the foundText (to avoid duplicates)
-    possibleEls.forEach(el => {
-      if (!el || !el.innerText) return;
-      if (el.innerText.trim() === foundText || el.innerText.trim().includes(foundText)) {
-        // but do not remove the entire authors block: only remove metadata elements (approx heuristic)
-        if (!el.classList.contains('pub-authors') && !el.closest('a')) {
-          el.remove();
-        }
-      }
-    });
-
-    // Find authors block to insert after; fallback to inserting at end of item
-    const authorsEl = item.querySelector('.pub-authors') || item.querySelector('.article-meta, .article-metadata, .media-body') || item;
-
-    // Create the single info node
-    const info = document.createElement('div');
-    info.className = 'added-pub-info';
-    info.innerHTML = '<strong>' + foundText + '</strong>';
-    info.style.marginTop = '0.35rem';
-    info.style.color = '#666';
-    info.style.fontSize = '0.95rem';
-    info.style.lineHeight = '1.25';
-
-    // Insert after authorsEl (if authorsEl is the container, append; otherwise insert after)
-    if (authorsEl && authorsEl.parentNode && authorsEl !== item) {
-      authorsEl.parentNode.insertBefore(info, authorsEl.nextSibling);
-    } else {
-      item.appendChild(info);
-    }
-  });
-
-});
-</script>
-
-
-
-<!-- Fetch each publication page and insert one "date · journal" line after authors -->
+<!-- Improved: fetch single pages, extract date + journal, insert nicely after authors -->
 <script>
 document.addEventListener('DOMContentLoaded', async function () {
   const items = Array.from(document.querySelectorAll('.stream-item, .media.stream-item'));
   if (!items.length) return;
 
-  // helper: fetch page and return text
-  async function fetchPage(url) {
+  const dateRegex = /\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s*\d{4}\b/;
+  const journalRegex1 = /Published at[:\s]*([^<\n\r]{3,120})/i;
+  const journalRegex2 = /publication:\s*"([^"]+)"/i;
+  const journalRegex3 = /\b(Journal of [A-Za-z0-9 &()\-]{3,120})\b/i;
+
+  async function fetchHtml(url) {
     try {
-      const res = await fetch(url, {credentials: 'same-origin'});
+      const res = await fetch(url, { credentials: 'same-origin' });
       if (!res.ok) return null;
       return await res.text();
     } catch (e) { return null; }
   }
 
-  // regex to find date like "November 16, 2023"
-  const dateRegex = /\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s*\d{4}\b/;
-  // regex to find common publication labels or the journal name line
-  const pubRegex = /Published at[:\s]*([^<\n\r]{3,120})|publication[:\s]*"([^"]+)"|Journal of [A-Za-z0-9 &()\-]+/i;
-
   for (const item of items) {
-    // skip if we already added it
-    if (item.querySelector('.added-pub-info')) continue;
+    // remove any earlier added node
+    const prev = item.querySelector('.added-pub-info');
+    if (prev) prev.remove();
 
-    // find link to single page
     const a = item.querySelector('a[href]');
     const href = a ? a.getAttribute('href') : null;
     if (!href) continue;
 
-    const html = await fetchPage(href);
+    const html = await fetchHtml(href);
     if (!html) continue;
 
-    // try to extract date
-    let dateMatch = html.match(dateRegex);
-    let dateText = dateMatch ? dateMatch[0].trim() : '';
+    // parse textContent for date and potential journal
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const bodyText = (doc.body && doc.body.innerText) ? doc.body.innerText : html;
 
-    // try to extract publication/journal
-    let pubMatch = html.match(pubRegex);
-    let pubText = '';
-    if (pubMatch) {
-      // prefer captured groups if present
-      pubText = (pubMatch[1] || pubMatch[2] || pubMatch[0] || '').trim();
-    } else {
-      // fallback: look for "publication" label in front matter rendered as text
-      const fallback = html.match(/Publication[:\s]*<\/.*?>([^<\n\r]{3,120})/i);
-      if (fallback) pubText = fallback[1].trim();
+    // find date
+    const dateMatch = bodyText.match(dateRegex);
+    const dateText = dateMatch ? dateMatch[0].trim() : '';
+
+    // find journal: try multiple strategies on parsed text and raw html
+    let journal = '';
+    let m = bodyText.match(journalRegex1);
+    if (m && m[1]) journal = m[1].trim();
+    if (!journal) {
+      m = html.match(journalRegex2);
+      if (m && m[1]) journal = m[1].trim();
+    }
+    if (!journal) {
+      m = bodyText.match(journalRegex3);
+      if (m && m[1]) journal = m[1].trim();
     }
 
-    // if neither found, skip
-    if (!dateText && !pubText) continue;
+    // fallback: try to find short "Publication" label near the date
+    if (!journal && dateText) {
+      const idx = bodyText.indexOf(dateText);
+      if (idx > -1) {
+        const around = bodyText.slice(Math.max(0, idx - 200), idx + 200);
+        const nearMatch = around.match(/(Journal of [A-Za-z0-9 &()\-]{3,120})/i);
+        if (nearMatch && nearMatch[1]) journal = nearMatch[1].trim();
+      }
+    }
+
+    // if nothing found at all, skip
+    if (!dateText && !journal) continue;
 
     // build final string
-    let final = dateText;
-    if (dateText && pubText) final = dateText + ' · ' + pubText;
-    else if (!dateText) final = pubText;
+    let final = dateText || '';
+    if (final && journal) final = final + ' · ' + journal;
+    else if (!final) final = journal;
 
-    // remove any existing identical nodes in this item (dedupe)
+    // remove any nodes that already contain this final text (dedupe)
     item.querySelectorAll('.added-pub-info, .pub-info, .article-metadata, .article-meta').forEach(n => {
       const t = (n.innerText || '').trim();
-      if (t && (t.includes(final) || t.toLowerCase().includes('last updated'))) {
-        n.remove();
-      }
+      if (!t) return;
+      if (t === final || t.includes(final) || /Last updated/i.test(t)) n.remove();
     });
 
-    // find position (after authors)
-    const authorsEl = item.querySelector('.pub-authors') || item.querySelector('.article-meta, .article-metadata, .media-body') || item;
+    // find insertion point (prefer .media-body > .pub-authors)
+    let authorsEl = item.querySelector('.media-body .pub-authors');
+    if (!authorsEl) authorsEl = item.querySelector('.media-body .article-meta, .media-body .article-metadata, .media-body .media-body, .media-body');
+    if (!authorsEl) authorsEl = item.querySelector('.pub-authors') || item;
 
+    // create node
     const info = document.createElement('div');
     info.className = 'added-pub-info';
     info.innerHTML = '<strong>' + final + '</strong>';
+    // styling to force block positioning under authors (not float right)
+    info.style.display = 'block';
+    info.style.clear = 'both';
     info.style.marginTop = '0.35rem';
     info.style.color = '#666';
     info.style.fontSize = '0.95rem';
     info.style.lineHeight = '1.25';
 
+    // insert after authorsEl
     if (authorsEl && authorsEl.parentNode && authorsEl !== item) {
       authorsEl.parentNode.insertBefore(info, authorsEl.nextSibling);
     } else {
