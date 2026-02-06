@@ -353,3 +353,11 @@ header.page-header {
 .pub-info { color: #666; font-size: 0.95rem; }
 .pub-journal { font-weight: 600; color: #444; }
 .pub-sep { margin: 0 0.4rem; color: #999; }
+
+
+.article-metadata {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+}
+
