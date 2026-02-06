@@ -23,11 +23,13 @@
         <div class="pub-authors">{{ delimit . ", " }}</div>
       {{ end }}
 
-      <div class="pub-info">
-        {{ $item.Date.Format "January 2, 2006" }} ·
-        Published at: {{ $item.Params.publication }}
+      <div class="pub-info" aria-hidden="false" style="color:#666; font-size:0.95rem; margin-top:0.4rem;">
+        <span class="pub-date">{{ $item.Date.Format "January 2, 2006" }}</span>
+        {{ if and $item.Params.publication (ne $item.Params.publication "") }}
+          <span class="pub-sep"> · </span>
+          <span class="pub-journal">Published at: {{ $item.Params.publication }}</span>
+        {{ end }}
       </div>
-    </div>
 
     {{ with $item.Params.url_pdf }}
       <a class="btn btn-outline-primary btn-sm mt-2" href="{{ . }}" target="_blank">
