@@ -16,3 +16,4 @@ image:
 
 draft: false
 ---
+show_last_updated: false
