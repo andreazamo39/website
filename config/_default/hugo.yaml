@@ -70,3 +70,5 @@ services:
   googleAnalytics:
     ID: ""
 
+enableGitInfo: false
+
