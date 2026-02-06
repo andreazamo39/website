@@ -392,6 +392,22 @@ header.page-header {
 .article-metadata * ,
 .pub-info * ,
 .pub-abstract * {
+
+
+
+
+
+
+
+  /* Hide "Last updated on ..." (Wowchemy/Hugo Blox) */
+.last-updated,
+.article-metadata .last-updated,
+.article-metadata .updated,
+.article-metadata time[datetime] + span,
+span:has(> i.fas.fa-history) {
+  display: none !important;
+}
+
   white-space: normal !important;
   overflow: visible !important;
   text-overflow: unset !important;
