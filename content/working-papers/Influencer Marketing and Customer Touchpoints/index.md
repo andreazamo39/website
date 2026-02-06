@@ -1,5 +1,5 @@
 ---
-title: "nfluencer Marketing and Customer Touchpoints"
+title: "Influencer Marketing and Customer Touchpoints"
 type: blank
 authors:
   - Maximilian Beichert
