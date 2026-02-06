@@ -1,6 +1,7 @@
 --- 
 title: "Working Papers" 
 url: "/working-papers/" 
+type: blank
 --- 
 This section presents my working papers and ongoing research projects.
 
