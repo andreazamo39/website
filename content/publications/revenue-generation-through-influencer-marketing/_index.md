@@ -23,7 +23,7 @@ draft: false
 ---
 ## Journal Article
 
-**Maximilian Beichert, Andreas Bayerl, Jacob Goldenberg, Andreas Lanz**
+**Maximilian Beichert, Andreas Bayerl, Jacob Goldenberg, Andreas Lanz**<br>
 <span style="color:#666"><strong>November 16, 2023; Published at: Journal of Marketing (FT 50)</strong></span>
 <br>
 <a href="https://journals.sagepub.com/doi/10.1177/00222429231217471"
