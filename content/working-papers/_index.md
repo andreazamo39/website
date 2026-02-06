@@ -4,18 +4,34 @@ type: landing
 sections:
   - block: markdown
     content:
-      title: "Working Papers"
-      text: "Coming soon."
+      title: ""
+      text: "This section presents my working papers and ongoing research projects."
+
+  - block: collection
+    content:
+      title: "Current Manuscripts"
+      filters:
+        folders:
+          - working-papers
+        tag: "Current Manuscripts"
+      sort_by: "date"
+      sort_ascending: false
+    design:
+      view: compact
+
+  - block: collection
+    content:
+      title: "Projects in development"
+      filters:
+        folders:
+          - working-papers
+        tag: "Projects in development"
+      sort_by: "date"
+      sort_ascending: false
+    design:
+      view: compact
 ---
-This section presents my working papers and ongoing research projects.
 
-## Current Manuscripts
-
-<div id="wp-current"></div>
-
-
-## Projects in development
-<div id="wp-development"></div>
 
 
 <!-- Start: fix navbar (inserted manually) -->
