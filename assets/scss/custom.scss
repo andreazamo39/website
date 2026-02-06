@@ -319,3 +319,13 @@ header.page-header {
   color: #999;
 }
 
+
+
+.pub-abstract,
+.article-style > p:first-of-type {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
