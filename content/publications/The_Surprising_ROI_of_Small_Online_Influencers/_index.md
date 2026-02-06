@@ -28,12 +28,14 @@ draft: false
 ## Journal Article
 
 **Maximilian Beichert, Xiaoxi Zhang, Andreas Bayerl, Jacob Goldenberg, Xian Gu, P.K. Kannan, and Andreas Lanz**<br>
-<span style="color:#666"><strong>August 22, 2024; Published at: MIT Sloan Management Review (FT 50) </strong></span>
-<br>
+<span style="color:#666"><strong>August 22, 2024; Published at: MIT Sloan Management Review (FT 50) </strong></span><br>
+<a href="https://sloanreview.mit.edu/article/the-surprising-roi-of-small-online-influencers/"
+   target="_blank" rel="noopener"
+   style="display:inline-block; margin-top:0.5rem; padding:6px 12px; border:1px solid #1a73e8; border-radius:4px; color:#1a73e8; text-decoration:none; font-weight:600; font-size:0.9rem;">
+  PDF
+</a>
 
----
-url_pdf: "https://sloanreview.mit.edu/article/the-surprising-roi-of-small-online-influencers/"
----
+
 
 
 
