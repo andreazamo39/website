@@ -128,13 +128,13 @@ custom_js:
 
 publications:
   date_format: January 2, 2006
-  show_date: true
+  show_date: false
   show_date_updated: false
 
 
 
 working-papers:
   date_format: January 2, 2006
-  show_date: true
+  show_date: false
   show_date_updated: false
 
