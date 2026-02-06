@@ -36,6 +36,3 @@ This section presents my research publications, linked to their full texts. Addi
 </script>
 <!-- End: fix navbar -->
 
-
-
-### TEST-123-QUESTO-TEXTO-DEVE-APPARIRE
