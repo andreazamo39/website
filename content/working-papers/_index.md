@@ -1,39 +1,8 @@
----
-title: "Working Papers"
-url: "/working-papers/"
-type: landing
-sections:
-  - block: markdown
-    content:
-      title: ""
-      text: "This section presents my working papers and ongoing research projects."
-
-  - block: collection
-    content:
-      title: "Current Manuscripts"
-      filters:
-        folders:
-          - working-papers
-        tags:
-          - "Current Manuscripts"
-      sort_by: "date"
-      sort_ascending: false
-    design:
-      view: citation
-
-  - block: collection
-    content:
-      title: "Projects in development"
-      filters:
-        folders:
-          - working-papers
-        tags:
-          - "Projects in development"
-      sort_by: "date"
-      sort_ascending: false
-    design:
-      view: citation
----
+--- 
+title: "Working Papers" 
+url: "/working-papers/" 
+--- 
+This section presents my working papers and ongoing research projects.
 
 
 
