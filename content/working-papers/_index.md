@@ -6,10 +6,11 @@ url: "/working-papers/"
 This section presents my working papers and ongoing research projects.
 
 ## Current Manuscripts
-{{< pages folder="working-papers" tag="Current Manuscripts" sort_by="date" sort_ascending="false" view="compact" >}}
+{{< pages path="working-papers" tag="Current Manuscripts" sort_by="date" sort_ascending="false" view="compact" >}}
 
 ## Projects in development
-{{< pages folder="working-papers" tag="Projects in development" sort_by="date" sort_ascending="false" view="compact" >}}
+{{< pages path="working-papers" tag="Projects in development" sort_by="date" sort_ascending="false" view="compact" >}}
+
 
 
 
