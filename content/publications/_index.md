@@ -117,3 +117,89 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 </script>
+
+
+
+<!-- Fetch each publication page and insert one "date · journal" line after authors -->
+<script>
+document.addEventListener('DOMContentLoaded', async function () {
+  const items = Array.from(document.querySelectorAll('.stream-item, .media.stream-item'));
+  if (!items.length) return;
+
+  // helper: fetch page and return text
+  async function fetchPage(url) {
+    try {
+      const res = await fetch(url, {credentials: 'same-origin'});
+      if (!res.ok) return null;
+      return await res.text();
+    } catch (e) { return null; }
+  }
+
+  // regex to find date like "November 16, 2023"
+  const dateRegex = /\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s*\d{4}\b/;
+  // regex to find common publication labels or the journal name line
+  const pubRegex = /Published at[:\s]*([^<\n\r]{3,120})|publication[:\s]*"([^"]+)"|Journal of [A-Za-z0-9 &()\-]+/i;
+
+  for (const item of items) {
+    // skip if we already added it
+    if (item.querySelector('.added-pub-info')) continue;
+
+    // find link to single page
+    const a = item.querySelector('a[href]');
+    const href = a ? a.getAttribute('href') : null;
+    if (!href) continue;
+
+    const html = await fetchPage(href);
+    if (!html) continue;
+
+    // try to extract date
+    let dateMatch = html.match(dateRegex);
+    let dateText = dateMatch ? dateMatch[0].trim() : '';
+
+    // try to extract publication/journal
+    let pubMatch = html.match(pubRegex);
+    let pubText = '';
+    if (pubMatch) {
+      // prefer captured groups if present
+      pubText = (pubMatch[1] || pubMatch[2] || pubMatch[0] || '').trim();
+    } else {
+      // fallback: look for "publication" label in front matter rendered as text
+      const fallback = html.match(/Publication[:\s]*<\/.*?>([^<\n\r]{3,120})/i);
+      if (fallback) pubText = fallback[1].trim();
+    }
+
+    // if neither found, skip
+    if (!dateText && !pubText) continue;
+
+    // build final string
+    let final = dateText;
+    if (dateText && pubText) final = dateText + ' · ' + pubText;
+    else if (!dateText) final = pubText;
+
+    // remove any existing identical nodes in this item (dedupe)
+    item.querySelectorAll('.added-pub-info, .pub-info, .article-metadata, .article-meta').forEach(n => {
+      const t = (n.innerText || '').trim();
+      if (t && (t.includes(final) || t.toLowerCase().includes('last updated'))) {
+        n.remove();
+      }
+    });
+
+    // find position (after authors)
+    const authorsEl = item.querySelector('.pub-authors') || item.querySelector('.article-meta, .article-metadata, .media-body') || item;
+
+    const info = document.createElement('div');
+    info.className = 'added-pub-info';
+    info.innerHTML = '<strong>' + final + '</strong>';
+    info.style.marginTop = '0.35rem';
+    info.style.color = '#666';
+    info.style.fontSize = '0.95rem';
+    info.style.lineHeight = '1.25';
+
+    if (authorsEl && authorsEl.parentNode && authorsEl !== item) {
+      authorsEl.parentNode.insertBefore(info, authorsEl.nextSibling);
+    } else {
+      item.appendChild(info);
+    }
+  } // for
+});
+</script>
