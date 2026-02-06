@@ -1,0 +1,36 @@
+<div class="media stream-item">
+  {{ $item := .item }}
+
+  {{ with $item.Params.image }}
+    <img class="mr-3" src="{{ .preview }}" alt="">
+  {{ end }}
+
+  <div class="media-body">
+
+    <h3 class="article-title mb-1 mt-0">
+      <a href="{{ $item.RelPermalink }}">{{ $item.Title }}</a>
+    </h3>
+
+    {{ with $item.Summary }}
+      <p class="pub-abstract">
+        {{ . | plainify }}
+      </p>
+    {{ end }}
+
+    <div class="pub-meta">
+      {{ with $item.Params.authors }}
+        <div class="pub-authors">{{ delimit . ", " }}</div>
+      {{ end }}
+
+      <div class="pub-info">
+        {{ $item.Date.Format "January 2, 2006" }} ·
+        Published at: {{ $item.Params.publication }}
+      </div>
+    </div>
+
+    {{ with $item.Params.url_pdf }}
+      <a class="btn btn-outline-primary btn-sm mt-2" href="{{ . }}" target="_blank">PDF</a>
+    {{ end }}
+
+  </div>
+</div>
