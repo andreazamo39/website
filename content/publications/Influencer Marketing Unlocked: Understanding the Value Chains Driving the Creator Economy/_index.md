@@ -1,20 +1,31 @@
 ---
-title: "Revenue Generation Through Influencer Marketing"
-summary: "Direct-to-consumer firms increasingly believe that influencer marketing is an effective option for seeding. However, the current managerially relevant question for direct-to-consumer firms of whether to target low- or high-followership influencers to generate immediate revenue is still unresolved. In this article, the..."
+title: "Influencer Marketing Unlocked: Understanding the Value Chains Driving the Creator Economy"
+summary: "As influencer marketing evolves into a dominant force in the marketing landscape, it necessitates a deeper theoretical exploration to understand its strategic implementations and impacts. This article examines the dynamics of influencer marketing within the growing creator economy, emphasizing the interactions among..."
 
-date: 2023-11-16
-lastmod: 2023-11-16
+date: 2025-01-24
+lastmod: 2025-01-24
 
 authors:
   - Maximilian Beichert
-  - Andreas Bayerl
-  - Jacob Goldenberg
+  - Barak Libai
+  - Ana Babic Rosario
+  - Bas Donkers
+  - Michael Haenlein
+  - Reto Hofstetter
+  - P.K. Kannan
+  - Ralf van der Lans
   - Andreas Lanz
+  - Alice Li
+  - Dina Mayzlin
+  - Eitan Muller
+  - Daniel Shapira
+  - Jeremy Yang
+  - Lingling Zhang
 
-publication: "Journal of Marketing (FT 50)"
+publication: "Journal of the Academy of Marketing Science (FT 50)"
 publication_types: ["2"]
 
-url_pdf: "https://journals.sagepub.com/doi/10.1177/00222429231217471"
+url_pdf: "https://link.springer.com/article/10.1007/s11747-024-01073-2?utm_source=rct_congratemailt&utm_medium=email&utm_campaign=oa_20250124&utm_content=10.1007/s11747-024-01073-2"
 
 image:
   filename: "featured3.jpg"
@@ -24,10 +35,10 @@ draft: false
 ---
 ## Journal Article
 
-**Maximilian Beichert, Andreas Bayerl, Jacob Goldenberg, Andreas Lanz**<br>
-<span style="color:#666"><strong>November 16, 2023; Published at: Journal of Marketing (FT 50)</strong></span>
+**Maximilian Beichert, Barak Libai,  Ana Babic Rosario, Bas Donkers, Michael Haenlein, Reto Hofstetter, P.K. Kannan, Ralf van der Lans, Andreas Lanz, Alice Li, Dina Mayzlin, Eitan Muller, Daniel Shapira, Jeremy Yang, and Lingling Zhang**<br>
+<span style="color:#666"><strong>January 24, 2025; Published at: Journal of the Academy of Marketing Science (FT 50)</strong></span>
 <br>
-<a href="https://journals.sagepub.com/doi/10.1177/00222429231217471"
+<a href="https://link.springer.com/article/10.1007/s11747-024-01073-2?utm_source=rct_congratemailt&utm_medium=email&utm_campaign=oa_20250124&utm_content=10.1007/s11747-024-01073-2"
    target="_blank"
    style="
      display:inline-block;
@@ -48,16 +59,11 @@ draft: false
 
 ## Abstract
 
-Direct-to-consumer firms increasingly believe that influencer marketing is an effective option for seeding. However, the current managerially relevant question for direct-to-consumer firms of whether to target low- or high-followership influencers to generate immediate revenue is still unresolved. In this article, the authors’ goal is to answer this question by considering for the first time the whole influencer-marketing funnel, that is, from followers on user-generated content networks (e.g., on Instagram), to reached followers, to engagement, to actual revenue, while accounting for the cost of paid endorsements. The authors find that low-followership targeting outperforms high-followership targeting by order of magnitude across three performance (return on investment) metrics. A mediation analysis reveals that engagement can explain the negative relationship between the influencer followership levels and return on investment. This is in line with the rationale based on social capital theory that with higher followership levels of an influencer, the engagement between an influencer and their followers decreases. These two findings are derived from secondary sales data of 1,881,533 purchases and results of three full-fledged field studies with hundreds of paid influencer endorsements, establishing the robustness of the findings.
+As influencer marketing evolves into a dominant force in the marketing landscape, it necessitates a deeper theoretical exploration to understand its strategic implementations and impacts. This article examines the dynamics of influencer marketing within the growing creator economy, emphasizing the interactions among firms, influencers, followers, and digital platforms. We introduce a novel, equity-driven framework that analyzes how influencers contribute to customer equity, how influencers manage and leverage the value from their followers, and how platforms maximize the value from their users. We detail the complex relationships and value exchanges within the influencer marketing ecosystem, highlighting the challenges of measuring the return on investment and influencers’ strategic use of content to maintain authenticity and influence. By synthesizing diverse academic literature and current industry practices, this manuscript provides a comprehensive overview of the mechanisms of value creation and exchange in influencer marketing, offers strategic implications for marketers aiming to optimize their influencer engagements, and outlines future work in the form of the eleven “INFLUENCERS” research directions.
 
 ## Awards & Press
 
-- 2025 Don Lehmann Award  
-- 2024 AMA / MSI / H. Paul Root Award  
-- Finalist 2024 Shelby D. Hunt / Harold H. Maynard Award  
-- Best Paper Award (Graduate School of Economic and Social Sciences, University of Mannheim)  
-- Best Student Paper Award (WISE Conference 2022)  
-- Featured in Harvard Business Review, Harvard Business Manager, MIT Sloan Management Review, Italia Oggi
+- Featured in Italia Oggi, and Luxury Tribune
 
 
 
