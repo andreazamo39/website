@@ -361,3 +361,39 @@ header.page-header {
   text-overflow: unset !important;
 }
 
+/* --- Forza rimozione ellipsis nei metadati/publication lines --- */
+/* Metti questo blocco alla FINE del foglio CSS (importante: dopo tutte le altre regole) */
+
+.article-metadata,
+.stream-item .article-metadata,
+.pub-meta,
+.pub-info,
+.pub-journal,
+.pub-sep,
+.pub-authors,
+.pub-abstract,
+.media-body p,
+.pub-list-item p,
+.article-style > p:first-of-type {
+  /* annulla i layout a riga singola / box-clamp */
+  display: block !important;
+  -webkit-box-orient: unset !important;
+  -webkit-line-clamp: unset !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+
+  /* altri fallback per browser che potrebbero avere prefissi */
+  -ms-text-overflow: unset !important;
+  -ms-overflow-style: auto !important;
+}
+
+/* In casi estremi (se ancora vedi puntini), applica forzatura su tutti i figli inline */
+.article-metadata * ,
+.pub-info * ,
+.pub-abstract * {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  display: revert !important; /* cerca di ripristinare il display originale */
+}
