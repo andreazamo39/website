@@ -1,48 +1,15 @@
 ---
 title: "Working Papers"
-type: landing
-sections:
-  - block: markdown
-    content:
-      title: ""
-      text: "This section presents my working papers and ongoing research projects."
-
-  # --- Heading 1 (forzato) ---
-  - block: markdown
-    content:
-      title: "Current Manuscripts"
-      text: ""
-
-  - block: collection
-    content:
-      title: ""
-      filters:
-        folders:
-          - working-papers
-        tag: "Current Manuscripts"
-      sort_by: "date"
-      sort_ascending: false
-    design:
-      view: compact
-
-  # --- Heading 2 (forzato) ---
-  - block: markdown
-    content:
-      title: "Projects in development"
-      text: ""
-
-  - block: collection
-    content:
-      title: ""
-      filters:
-        folders:
-          - working-papers
-        tag: "Projects in development"
-      sort_by: "date"
-      sort_ascending: false
-    design:
-      view: compact
+url: "/working-papers/"
 ---
+
+This section presents my working papers and ongoing research projects.
+
+## Current Manuscripts
+{{< pages folder="working-papers" tag="Current Manuscripts" sort_by="date" sort_ascending="false" view="compact" >}}
+
+## Projects in development
+{{< pages folder="working-papers" tag="Projects in development" sort_by="date" sort_ascending="false" view="compact" >}}
 
 
 
