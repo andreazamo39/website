@@ -388,18 +388,7 @@ header.page-header {
   -ms-overflow-style: auto !important;
 }
 
-/* In casi estremi (se ancora vedi puntini), applica forzatura su tutti i figli inline */
-.article-metadata * ,
-.pub-info * ,
-.pub-abstract * {
-
-
-
-
-
-
-
-  /* Hide "Last updated on ..." (Wowchemy/Hugo Blox) */
+/* Hide "Last updated on ..." */
 .last-updated,
 .article-metadata .last-updated,
 .article-metadata .updated,
@@ -407,6 +396,7 @@ header.page-header {
 span:has(> i.fas.fa-history) {
   display: none !important;
 }
+
 
   white-space: normal !important;
   overflow: visible !important;
@@ -433,6 +423,26 @@ span:has(> i.fas.fa-history) {
 
 
 
+/* FIX hamburger: nel menu mobile aperto i link devono essere scuri (sfondo chiaro) */
+.navbar-collapse.show a,
+.navbar-collapse.show .nav-link,
+.navbar-collapse.show .dropdown-item {
+  color: #111 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+/* Assicura sfondo chiaro nel pannello mobile */
+.navbar-collapse.show {
+  background: #fff !important;
+}
+
+
+/* Nasconde il toggle tema (mezzaluna/sole) */
+.theme-switcher,
+.js-set-theme,
+.dark-toggle {
+  display: none !important;
+}
 
 
 
