@@ -43,12 +43,12 @@ type: blank
 <div class="teach-section-title">Teaching</div>
 
 <div>
-  <div class="teach-item-title">Applied Social Psychology</div>
-  <div class="teach-item-univ">University of Milano-Bicocca</div>
+  <div class="teach-item-title">Data Science for Business II</div>
+  <div class="teach-item-univ">Mannheim Business School</div>
   <div class="teach-item-desc">
-    Course taught within the Bachelor's program in Psychological Sciences (2023/2024 – present).
-    The course explores how social psychology can be applied to real-world issues such as
-    misinformation, sustainability, and dehumanization.
+    Course taught at the MBA level. The course introduces key concepts, tools, and practices of data science from a managerial perspective, focusing on the use of data for
+    both operational and strategic decision-making. It emphasizes how data assets generate value within organizations, and how analytical results can be translated into
+    actionable business insights to support innovation and productivity.
   </div>
 </div>
 
