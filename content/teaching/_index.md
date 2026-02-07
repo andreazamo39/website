@@ -84,13 +84,13 @@ context of digital transformation and sustainability, with a focus on customer v
 <div>
   <div class="teach-item-title">Selected Student Comments:</div>
   <div class="teach-item-desc">
-    <li>"I really liked the lecturer's teaching manner and his attitude and how open and approachable he was. The way he picked certain topics from the material covered by the lectures and initiated discussions making giving space to everyone and to participate and contribute."<li>
-<li>"Very accessible and easy-to-follow lessons, with a professor who is very approachable and encourages discussion"<li>
-<li>"The course was very well structured and the topics were very well explained throughout the lectures."<li>
-<li>"Very approachable and kind professor who is passionate about the course"<li>
-<li>"I especially liked the very good structure of the course. It was very easy to follow and you noticed that the teacher prepared extensively for the event. It was also very positive that the feedback after the first part of the block course was taken into account and that there was an even stronger focus on discussion sessions in the second part. It was a lot of fun!"<li>
-<li>"The professor has been very clear, professional and helpful"<li>
-<li>"I really liked the course and the lecturer. Thankful for the opportunity to attend this course."<li>
+    • "I really liked the lecturer's teaching manner and his attitude and how open and approachable he was. The way he picked certain topics from the material covered by the lectures and initiated discussions making giving space to everyone and to participate and contribute."
+• "Very accessible and easy-to-follow lessons, with a professor who is very approachable and encourages discussion"
+• "The course was very well structured and the topics were very well explained throughout the lectures."
+• "Very approachable and kind professor who is passionate about the course"
+• "I especially liked the very good structure of the course. It was very easy to follow and you noticed that the teacher prepared extensively for the event. It was also very positive that the feedback after the first part of the block course was taken into account and that there was an even stronger focus on discussion sessions in the second part. It was a lot of fun!"
+• "The professor has been very clear, professional and helpful"
+• "I really liked the course and the lecturer. Thankful for the opportunity to attend this course."
   </div> 
 </div>
 
@@ -105,7 +105,7 @@ context of digital transformation and sustainability, with a focus on customer v
 </div>
 
 <div class="teach-item-desc">
-  • “Bocconi University; HEC Paris; TU Munich, 2024  
+  • Bocconi University; HEC Paris; TU Munich, 2024  
 </div>
 
 <div class="teach-item-desc">
