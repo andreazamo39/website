@@ -444,6 +444,40 @@ span:has(> i.fas.fa-history) {
   display: none !important;
 }
 
+/* === FIX hamburger mobile (forza link visibili nel menu aperto) === */
+@media (max-width: 992px){
+
+  /* qualunque link dentro la navbar/mobile menu diventa scuro */
+  .navbar a,
+  #navbar-main a,
+  .navbar-nav a,
+  .dropdown-menu a,
+  .navbar-collapse a {
+    color: #111 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* pannello menu: sfondo bianco */
+  .navbar-collapse,
+  .dropdown-menu {
+    background: #fff !important;
+  }
+}
+
+
+
+
+
+/* Hide theme toggle (moon icon) */
+.theme-switcher,
+.js-set-theme,
+.dark-toggle,
+.navbar .fa-moon,
+.navbar .fa-sun {
+  display: none !important;
+}
+
 
 
 
