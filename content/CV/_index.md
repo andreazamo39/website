@@ -1,11 +1,8 @@
-title: "CV"
-type: landing
-sections:
-  - block: markdown
-    content:
-      title: "CV"
-      text: "Coming soon."
 ---
+title: "Curriculum Vitae"
+type: blank
+---
+
 
 
 
