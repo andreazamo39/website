@@ -2,6 +2,10 @@
 title: "Teaching"
 type: blank
 ---
+<div style="max-width: 900px; margin: 24px 0 40px 0; line-height: 1.6;">
+  This page presents my teaching activities and academic outreach, including courses taught
+  at the undergraduate and graduate levels, as well as conference and invited presentations.
+</div>
 
 <style>
 /* Section titles */
