@@ -46,10 +46,10 @@ type: blank
   <div class="teach-item-title">Data Science for Business II</div>
   <div class="teach-item-univ">Mannheim Business School</div>
   <div class="teach-item-desc">
-    Course taught at the **MBA level**. The course introduces key concepts, tools, and practices of data science from a managerial perspective, focusing on the use of data for
+    Course taught at the <strong>MBA level</strong>. The course introduces key concepts, tools, and practices of data science from a managerial perspective, focusing on the use of data for
     both operational and strategic decision-making. It emphasizes how data assets generate value within organizations, and how analytical results can be translated into
-    actionable business insights to support innovation and productivity.
-    **Rating: 4.6/5**
+    actionable business insights to support innovation and productivity.<br>
+    <strong>Rating: 4.6/5<strong>
   </div>
 </div>
 
@@ -57,9 +57,9 @@ type: blank
   <div class="teach-item-title">Marketing Management - Advanced</div>
   <div class="teach-item-univ">Bocconi University</div>
   <div class="teach-item-desc">
-    Course taught at the **master’s level**. The course examines the evolution of marketing in the
-context of digital transformation and sustainability, with a focus on customer value, customer centricity, and the role of marketing in creating business value. It introduces key marketing metrics and analytical frameworks for measuring customer value and satisfaction, and explores strategic and operational approaches to managing customer relationships in the data-driven economy.
-    **Rating: 4.1/5**
+    Course taught at the <strong>master’s level<strong>. The course examines the evolution of marketing in the
+context of digital transformation and sustainability, with a focus on customer value, customer centricity, and the role of marketing in creating business value. It introduces key marketing metrics and analytical frameworks for measuring customer value and satisfaction, and explores strategic and operational approaches to managing customer relationships in the data-driven economy.<br>
+    <strong>Rating: 4.1/5<strong>
   </div>
 </div>
 
@@ -67,8 +67,8 @@ context of digital transformation and sustainability, with a focus on customer v
   <div class="teach-item-title">Digital Strategy</div>
   <div class="teach-item-univ">Engage EU</div>
   <div class="teach-item-desc">
-    Course taught at the **master’s level**. The course examines digital transformation as a multidimensional process that reshapes business models, organizational processes, and customer relationships. It focuses on the strategic role of digital technologies and data as key enablers of innovation, platform-based competition, and market disruption, and equips students with the analytical and managerial frameworks needed to design and implement effective digital strategies.
-    **Rating: 4.9/5**
+    Course taught at the <strong>master’s level<strong>. The course examines digital transformation as a multidimensional process that reshapes business models, organizational processes, and customer relationships. It focuses on the strategic role of digital technologies and data as key enablers of innovation, platform-based competition, and market disruption, and equips students with the analytical and managerial frameworks needed to design and implement effective digital strategies.<br>
+    <strong>Rating: 4.9/5<strong>
   </div>
 </div>
 
@@ -76,21 +76,21 @@ context of digital transformation and sustainability, with a focus on customer v
   <div class="teach-item-title">The Creator Economy: Strategy, Monetization, and Impact</div>
   <div class="teach-item-univ">Bocconi University</div>
   <div class="teach-item-desc">
-    Course taught at the **bachelor’s level**. The course introduces students to the creator economy, examining how digital platforms, content, and online communities generate new business models and reshape traditional industries. It covers platform dynamics, monetization strategies, personal branding, and brand–creator collaborations, while also addressing legal, regulatory, and ethical challenges. The course integrates perspectives from economics, marketing, technology, and law to develop analytical skills and strategic awareness of the evolving digital economy.
-    **Rating: New**
+    Course taught at the <strong>bachelor’s level<strong>. The course introduces students to the creator economy, examining how digital platforms, content, and online communities generate new business models and reshape traditional industries. It covers platform dynamics, monetization strategies, personal branding, and brand–creator collaborations, while also addressing legal, regulatory, and ethical challenges. The course integrates perspectives from economics, marketing, technology, and law to develop analytical skills and strategic awareness of the evolving digital economy.<br>
+    <strong>Rating: New<strong>
   </div> 
 </div>
 
 <div>
   <div class="teach-item-title">Selected Student Comments:</div>
   <div class="teach-item-desc">
-    • "I really liked the lecturer's teaching manner and his attitude and how open and approachable he was. The way he picked certain topics from the material covered by the lectures and initiated discussions making giving space to everyone and to participate and contribute."
-• "Very accessible and easy-to-follow lessons, with a professor who is very approachable and encourages discussion"
-• "The course was very well structured and the topics were very well explained throughout the lectures."
-• "Very approachable and kind professor who is passionate about the course"
-• "I especially liked the very good structure of the course. It was very easy to follow and you noticed that the teacher prepared extensively for the event. It was also very positive that the feedback after the first part of the block course was taken into account and that there was an even stronger focus on discussion sessions in the second part. It was a lot of fun!"
-• "The professor has been very clear, professional and helpful"
-• "I really liked the course and the lecturer. Thankful for the opportunity to attend this course."
+    • "I really liked the lecturer's teaching manner and his attitude and how open and approachable he was. The way he picked certain topics from the material covered by the lectures and initiated discussions making giving space to everyone and to participate and contribute."<br>
+• "Very accessible and easy-to-follow lessons, with a professor who is very approachable and encourages discussion."<br>
+• "The course was very well structured and the topics were very well explained throughout the lectures."<br>
+• "Very approachable and kind professor who is passionate about the course."<br>
+• "I especially liked the very good structure of the course. It was very easy to follow and you noticed that the teacher prepared extensively for the event. It was also very positive that the feedback after the first part of the block course was taken into account and that there was an even stronger focus on discussion sessions in the second part. It was a lot of fun!"<br>
+• "The professor has been very clear, professional and helpful"<br>
+• "I really liked the course and the lecturer. Thankful for the opportunity to attend this course."<br>
   </div> 
 </div>
 
