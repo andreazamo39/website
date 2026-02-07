@@ -7,12 +7,17 @@
   background-color: #8b0000 !important;
 }
 
-/* Testo navbar White */
-.navbar .navbar-brand,
-.navbar .nav-link,
-.navbar a {
+/* Navbar: link bianchi SOLO nella barra */
+.navbar:not(.navbar-collapse) .navbar-brand,
+.navbar:not(.navbar-collapse) .nav-link {
   color: #ffffff !important;
 }
+/* Menu mobile (hamburger): link scuri su sfondo chiaro */
+.navbar-collapse .nav-link,
+.navbar-collapse a {
+  color: #111111 !important;
+}
+
 
 .navbar .nav-link:hover,
 .navbar a:hover {
