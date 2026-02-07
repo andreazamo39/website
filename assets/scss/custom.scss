@@ -413,3 +413,20 @@ span:has(> i.fas.fa-history) {
   text-overflow: unset !important;
   display: revert !important; /* cerca di ripristinare il display originale */
 }
+
+
+
+
+
+/* Keep navbar on top (only affects this page layout) */
+.page-header.header--fixed {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 99999 !important;
+  transform: none !important;
+}
+.cv-page {
+  margin-top: 120px; /* aumenta/diminuisci se serve */
+}
