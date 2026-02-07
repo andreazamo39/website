@@ -46,10 +46,10 @@ type: blank
   <div class="teach-item-title">Data Science for Business II</div>
   <div class="teach-item-univ">Mannheim Business School</div>
   <div class="teach-item-desc">
-    Course taught at the MBA level. The course introduces key concepts, tools, and practices of data science from a managerial perspective, focusing on the use of data for
+    Course taught at the **MBA level**. The course introduces key concepts, tools, and practices of data science from a managerial perspective, focusing on the use of data for
     both operational and strategic decision-making. It emphasizes how data assets generate value within organizations, and how analytical results can be translated into
     actionable business insights to support innovation and productivity.
-    Rating: 4.6/5
+    **Rating: 4.6/5**
   </div>
 </div>
 
@@ -57,9 +57,9 @@ type: blank
   <div class="teach-item-title">Marketing Management - Advanced</div>
   <div class="teach-item-univ">Bocconi University</div>
   <div class="teach-item-desc">
-    Course taught at the master’s level. The course examines the evolution of marketing in the
+    Course taught at the **master’s level**. The course examines the evolution of marketing in the
 context of digital transformation and sustainability, with a focus on customer value, customer centricity, and the role of marketing in creating business value. It introduces key marketing metrics and analytical frameworks for measuring customer value and satisfaction, and explores strategic and operational approaches to managing customer relationships in the data-driven economy.
-    Rating: 4.1/5
+    **Rating: 4.1/5**
   </div>
 </div>
 
@@ -67,8 +67,8 @@ context of digital transformation and sustainability, with a focus on customer v
   <div class="teach-item-title">Digital Strategy</div>
   <div class="teach-item-univ">Engage EU</div>
   <div class="teach-item-desc">
-    Course taught at the master’s level. The course examines digital transformation as a multidimensional process that reshapes business models, organizational processes, and customer relationships. It focuses on the strategic role of digital technologies and data as key enablers of innovation, platform-based competition, and market disruption, and equips students with the analytical and managerial frameworks needed to design and implement effective digital strategies.
-    Rating: 4.9/5
+    Course taught at the **master’s level**. The course examines digital transformation as a multidimensional process that reshapes business models, organizational processes, and customer relationships. It focuses on the strategic role of digital technologies and data as key enablers of innovation, platform-based competition, and market disruption, and equips students with the analytical and managerial frameworks needed to design and implement effective digital strategies.
+    **Rating: 4.9/5**
   </div>
 </div>
 
@@ -76,8 +76,8 @@ context of digital transformation and sustainability, with a focus on customer v
   <div class="teach-item-title">The Creator Economy: Strategy, Monetization, and Impact</div>
   <div class="teach-item-univ">Bocconi University</div>
   <div class="teach-item-desc">
-    Course taught at the bachelor’s level. The course introduces students to the creator economy, examining how digital platforms, content, and online communities generate new business models and reshape traditional industries. It covers platform dynamics, monetization strategies, personal branding, and brand–creator collaborations, while also addressing legal, regulatory, and ethical challenges. The course integrates perspectives from economics, marketing, technology, and law to develop analytical skills and strategic awareness of the evolving digital economy.
-    Rating: New
+    Course taught at the **bachelor’s level**. The course introduces students to the creator economy, examining how digital platforms, content, and online communities generate new business models and reshape traditional industries. It covers platform dynamics, monetization strategies, personal branding, and brand–creator collaborations, while also addressing legal, regulatory, and ethical challenges. The course integrates perspectives from economics, marketing, technology, and law to develop analytical skills and strategic awareness of the evolving digital economy.
+    **Rating: New**
   </div> 
 </div>
 
