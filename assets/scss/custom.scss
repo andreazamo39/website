@@ -416,12 +416,6 @@ span:has(> i.fas.fa-history) {
 }
 
 
-  white-space: normal !important;
-  overflow: visible !important;
-  text-overflow: unset !important;
-  display: revert !important; /* cerca di ripristinare il display originale */
-}
-
 
 
 
@@ -440,3 +434,28 @@ span:has(> i.fas.fa-history) {
 }
 
 
+/* ===== FIX DEFINITIVO HAMBURGER MOBILE ===== */
+@media (max-width: 991.98px) {
+
+  /* menu a tendina */
+  #navbar-content {
+    background: #ffffff !important;
+  }
+
+  /* link del menu mobile */
+  #navbar-content .nav-link,
+  #navbar-content a,
+  #navbar-content span {
+    color: #111111 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+
+/* Remove dark mode toggle */
+.js-set-theme,
+.theme-switcher,
+.nav-icons {
+  display: none !important;
+}
