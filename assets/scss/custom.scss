@@ -7,16 +7,29 @@
   background-color: #8b0000 !important;
 }
 
-/* Navbar: link bianchi SOLO nella barra */
-.navbar:not(.navbar-collapse) .navbar-brand,
-.navbar:not(.navbar-collapse) .nav-link {
-  color: #ffffff !important;
+/* Navbar desktop: link bianchi sulla barra rossa */
+@media (min-width: 992px) {
+  .navbar .navbar-brand,
+  .navbar .nav-link,
+  .navbar a {
+    color: #ffffff !important;
+  }
 }
-/* Menu mobile (hamburger): link scuri su sfondo chiaro */
-.navbar-collapse .nav-link,
-.navbar-collapse a {
-  color: #111111 !important;
+
+/* Menu mobile (hamburger): link scuri su sfondo bianco */
+@media (max-width: 991.98px) {
+  #navbar-content .nav-link,
+  #navbar-content a {
+    color: #111111 !important;
+  }
 }
+
+.js-set-theme,
+.theme-switcher,
+.nav-icons {
+  display: none !important;
+}
+
 
 
 .navbar .nav-link:hover,
@@ -425,65 +438,5 @@ span:has(> i.fas.fa-history) {
 .cv-page {
   margin-top: 120px; /* aumenta/diminuisci se serve */
 }
-
-
-
-/* FIX hamburger: nel menu mobile aperto i link devono essere scuri (sfondo chiaro) */
-.navbar-collapse.show a,
-.navbar-collapse.show .nav-link,
-.navbar-collapse.show .dropdown-item {
-  color: #111 !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-/* Assicura sfondo chiaro nel pannello mobile */
-.navbar-collapse.show {
-  background: #fff !important;
-}
-
-
-/* Nasconde il toggle tema (mezzaluna/sole) */
-.theme-switcher,
-.js-set-theme,
-.dark-toggle {
-  display: none !important;
-}
-
-/* === FIX hamburger mobile (forza link visibili nel menu aperto) === */
-@media (max-width: 992px){
-
-  /* qualunque link dentro la navbar/mobile menu diventa scuro */
-  .navbar a,
-  #navbar-main a,
-  .navbar-nav a,
-  .dropdown-menu a,
-  .navbar-collapse a {
-    color: #111 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-
-  /* pannello menu: sfondo bianco */
-  .navbar-collapse,
-  .dropdown-menu {
-    background: #fff !important;
-  }
-}
-
-
-
-
-
-/* Hide theme toggle (moon icon) */
-.theme-switcher,
-.js-set-theme,
-.dark-toggle,
-.navbar .fa-moon,
-.navbar .fa-sun {
-  display: none !important;
-}
-
-
-
 
 
