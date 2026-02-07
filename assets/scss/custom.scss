@@ -430,3 +430,49 @@ span:has(> i.fas.fa-history) {
 .cv-page {
   margin-top: 120px; /* aumenta/diminuisci se serve */
 }
+
+
+
+
+
+
+
+/* --- Mobile menu & dropdown visibility fixes --- */
+
+/* Ensure navbar sits above content */
+.page-header, #navbar-main {
+  z-index: 10000 !important;
+}
+
+/* Ensure the mobile menu dropdown is on top and visible */
+.navbar-collapse,
+.navbar-nav,
+.dropdown-menu {
+  z-index: 11000 !important;
+}
+
+/* Make sure dropdown background isn't transparent */
+.dropdown-menu,
+.navbar-collapse {
+  background: #ffffff !important;
+}
+
+/* Make menu links visible on white background */
+.navbar-collapse a,
+.dropdown-menu a,
+.navbar-nav a {
+  color: #111111 !important;
+}
+
+/* Dark mode: ensure menu background + text flip correctly */
+.dark .dropdown-menu,
+.dark .navbar-collapse {
+  background: #111111 !important;
+}
+
+.dark .navbar-collapse a,
+.dark .dropdown-menu a,
+.dark .navbar-nav a {
+  color: #ffffff !important;
+}
+
